@@ -19,7 +19,7 @@ const MenuItem = () => {
   return (
     <ul className="container__list-navigation">
       {menuItem.map((item) => (
-        <li>{item}</li>
+        <li key={item}>{item}</li>
       ))}
     </ul>
   );
@@ -32,7 +32,9 @@ const SelectItem = () => {
   return (
     <select className="select__navigation">
       {options.map((item) => (
-        <option value={item.value}>{item.label}</option>
+        <option value={item.value} key={item.value}>
+          {item.label}
+        </option>
       ))}
     </select>
   );

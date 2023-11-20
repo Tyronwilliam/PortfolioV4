@@ -32,10 +32,10 @@ const LayoutSkill = () => {
       <Fade cascade duration={300} direction="left" triggerOnce={true}>
         <ul>
           {skills?.map((skill) => (
-            <li>
+            <li key={skill.value}>
               <div>
-                {skill?.image?.map((item) => (
-                  <img src={item} alt="icon" />
+                {skill?.image?.map((item, index) => (
+                  <img src={item} alt="icon" key={index} />
                 ))}
               </div>
               <span>{skill.value}</span>
