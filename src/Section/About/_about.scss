@@ -1,18 +1,48 @@
 #about {
-  @include FlexColBase;
-  gap: 15px;
-  strong {
-    color: $SECOND_COLOR;
+  .container__content {
+    @include FlexColBase;
+    gap: 15px;
+    margin-bottom: 30px;
+    strong {
+      color: $SECOND_COLOR;
+    }
+    .main_div {
+      @include FlexRowBase;
+      gap: 8px;
+    }
+    .yellow_band {
+      flex-shrink: 0;
+      width: 10px;
+      height: 2px;
+      margin-top: 10px;
+      background-color: $SECOND_COLOR;
+    }
   }
-  .main_div {
+}
+
+.container__skills-item {
+  margin-top: 30px;
+  ul {
     @include FlexRowBase;
-    gap: 8px;
-  }
-  .yellow_band {
-    flex-shrink: 0;
-    width: 10px;
-    height: 2px;
-    margin-top: 10px;
-    background-color: $SECOND_COLOR;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    row-gap: 25px;
+    li {
+      div {
+        @include FlexRowBase;
+      }
+      margin: 0 auto;
+      @include FlexColBase;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      height: 220px;
+      align-items: center;
+      border-radius: 10px;
+      background: $THIRD_COLOR;
+    }
   }
 }
