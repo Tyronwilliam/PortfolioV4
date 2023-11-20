@@ -1,8 +1,11 @@
 @import "./abstracts/variables.scss";
 @import "./abstracts/mixin.scss";
 @import "./abstracts/font.scss";
+@import "./abstracts/reset.scss";
 
 @import "../Section/components/Navigation/navbar.scss";
+@import "../Section/Home/home.scss";
+@import "../Section/About/about.scss";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,4 +17,24 @@ body {
   font-family: "Noto Sans";
   background: $MAIN_COLOR;
   color: white;
+}
+
+.section {
+  max-width: 1100px;
+  height: 100%;
+  min-height: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  // border: 1px solid white;
+}
+.left_right-box {
+  @include FlexColBase;
+  position: relative;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 19px;
+  @include respond-to("medium") {
+    @include FlexRowBase;
+  }
 }
