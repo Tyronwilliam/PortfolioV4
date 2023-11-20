@@ -1,0 +1,24 @@
+$MAIN_COLOR: rgb(52, 53, 58);
+$SECOND_COLOR: rgb(222, 176, 99);
+$UNSELECTED: rgb(102, 103, 107);
+$EXTRASMALL: 14px;
+$SMALLTEXT: 18px;
+$MEDIUMTEXT: 20px;
+$LARGETEXT: 23px;
+$breakpoints: (
+  "medium": (
+    min-width: 768px,
+  ),
+  "carousel": (
+    min-width: 1000px,
+  ),
+  "inter": (
+    min-width: 1024px,
+  ),
+  "large": (
+    min-width: 1200px,
+  ),
+  "huge": (
+    min-width: 1440px,
+  ),
+);

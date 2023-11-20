@@ -1,0 +1,17 @@
+@import "./abstracts/variables.scss";
+@import "./abstracts/mixin.scss";
+@import "./abstracts/font.scss";
+
+@import "../Section/components/Navigation/navbar.scss";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Noto Sans";
+  background: $MAIN_COLOR;
+  color: white;
+}

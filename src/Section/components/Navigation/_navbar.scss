@@ -1,0 +1,52 @@
+.container__navigation {
+  @include FlexRowBase;
+  width: 100%;
+  height: 64px;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.container__logo {
+  display: none;
+  width: auto;
+  height: 90%;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: $UNSELECTED;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include respond-to("medium") {
+    display: block;
+  }
+}
+.container__list-navigation {
+  @include FlexRowBase;
+  gap: 10px;
+  list-style-type: none;
+  margin: 0 auto;
+  li {
+    cursor: pointer;
+    &:hover {
+      color: $UNSELECTED;
+    }
+  }
+  @include respond-to("medium") {
+    gap: 25px;
+  }
+}
+.select__navigation {
+  color: white;
+  background: rgb(61, 62, 66);
+  border: none;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select:focus {
+  outline: none;
+}
