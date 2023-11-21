@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import CartoonMe from "../../assets/Standing_confident.png";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -7,8 +8,7 @@ const Home = () => {
     <section id="home">
       <div className="section custom-heigth">
         <div className="left_right-box">
-          <Presentation />
-          <Cartoon />
+          <Presentation /> <Cartoon />{" "}
         </div>
       </div>
     </section>
@@ -19,14 +19,16 @@ export default Home;
 
 const Presentation = () => {
   return (
-    <div className="intro__content-box">
-      <div>
-        <p>Je suis</p>
-        <p>Tyron-William CHANU </p>
+    <Fade triggerOnce={true} cascade>
+      <div className="intro__content-box">
+        <div>
+          <p>Je suis</p>
+          <p>Tyron-William CHANU </p>
+        </div>
+        <span>Développeur Fullstack JS</span>
+        <button>Contact</button>
       </div>
-      <span>Développeur Fullstack JS</span>
-      <button>Contact</button>
-    </div>
+    </Fade>
   );
 };
 

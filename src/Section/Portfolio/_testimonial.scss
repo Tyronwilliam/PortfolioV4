@@ -6,7 +6,7 @@
     > div {
       @include FlexColBase;
       gap: 10px;
-      > div {
+      .container__content-testimonial {
         @include FlexRowBase;
         gap: 10px;
       }

@@ -3,25 +3,29 @@ import { BsTelephone } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Slide } from "react-awesome-reveal";
+
 const icone = [<FaGithub />, <FaLinkedinIn />];
 const Contact = () => {
   return (
     <section id="contact" className="section contact__section">
       <Entete item="Contact" />
-      <div className="container__content-contact">
-        <div>
-          <MdEmail />
-          <p>frenchwebdeveloper@gmail.com</p>
-        </div>
-        <div>
-          <BsTelephone />
-          <p>+33 784080036</p>
-        </div>
-        <div>
-          <MdOutlineLocationOn />
-          <p>Paris 19, France</p>
-        </div>
-      </div>{" "}
+      <Slide cascade>
+        <div className="container__content-contact">
+          <div>
+            <MdEmail />
+            <p>frenchwebdeveloper@gmail.com</p>
+          </div>
+          <div>
+            <BsTelephone />
+            <p>+33 784080036</p>
+          </div>
+          <div>
+            <MdOutlineLocationOn />
+            <p>Paris 19, France</p>
+          </div>
+        </div>{" "}
+      </Slide>
       <Entete item={icone} />
     </section>
   );

@@ -1,5 +1,6 @@
 import PRO from "../../../assets/pro.png";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Slide } from "react-awesome-reveal";
 
 interface Temoignage {
   fullName: string;
@@ -23,12 +24,14 @@ const Testimonial = () => {
         <div>
           <h2>Témoignages</h2>
           {temoignage?.map((item) => (
-            <ContentTestimonial
-              fullName={item.fullName}
-              testimony={item.testimony}
-              role={item.role}
-              linkedinUrl={item.linkedinUrl}
-            />
+            <Slide>
+              <ContentTestimonial
+                fullName={item.fullName}
+                testimony={item.testimony}
+                role={item.role}
+                linkedinUrl={item.linkedinUrl}
+              />
+            </Slide>
           ))}
         </div>
         <div className="container_cartoon">
@@ -48,7 +51,7 @@ const ContentTestimonial = ({
   linkedinUrl,
 }: Temoignage) => {
   return (
-    <div>
+    <div className="container__content-testimonial">
       <div className="yellow_band"></div>
       <div className="content__box-testimonial">
         <p>{testimony}</p>
