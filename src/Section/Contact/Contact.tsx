@@ -4,6 +4,8 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
+import toast, { Toaster } from "react-hot-toast";
+import React from "react";
 
 export interface Icone {
   icon: React.ReactElement;
@@ -16,19 +18,47 @@ const icone: Icone[] = [
     link: "https://www.linkedin.com/in/tyron-william-chanu-483956171/",
   },
 ];
+const notifySuccess = () => toast.success("Copié !");
+const notifyError = () => toast.error("Oups ! ça n'a pas fonctionné");
+function copyToClipboard(text: string) {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      notifySuccess();
+    })
+    .catch(() => {
+      notifyError();
+    });
+}
 const Contact = () => {
+  const [isEmailHovered, setIsEmailHovered] = React.useState(false);
+  const [isPhoneNumberHovered, setIsPhoneNumberHovered] = React.useState(false);
+
   return (
     <section id="Contact" className="section contact__section">
+      <Toaster />
       <Entete item="Contact" />
       <Slide delay={100}>
         <div className="container__content-contact">
-          <div>
+          <div
+            onClick={() => copyToClipboard("frenchwebdeveloper@gmail.com")}
+            onMouseEnter={() => setIsEmailHovered(true)}
+            onMouseLeave={() => setIsEmailHovered(false)}
+          >
             <MdEmail />
             <p>frenchwebdeveloper@gmail.com</p>
+            {isEmailHovered && <span>Cliquez pour copier le mail</span>}
           </div>
-          <div>
+          <div
+            onClick={() => copyToClipboard("784080036")}
+            onMouseEnter={() => setIsPhoneNumberHovered(true)}
+            onMouseLeave={() => setIsPhoneNumberHovered(false)}
+          >
             <BsTelephone />
-            <p>+33 784080036</p>
+            <p>+33 784080036</p>{" "}
+            {isPhoneNumberHovered && (
+              <span>Cliquez pour copier le numéro de téléphone</span>
+            )}
           </div>
           <div>
             <MdOutlineLocationOn />

@@ -36,6 +36,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   gap: 15px;
   margin: 0 auto 35px auto;
@@ -51,10 +52,29 @@
     border-radius: 5px;
     color: $SECOND_COLOR;
     font-weight: 600;
+    cursor: pointer;
     svg {
       width: 20px;
       height: 20px;
       fill: white;
     }
+    &:hover {
+      background-color: $UNSELECTED;
+    }
+  }
+  div:last-child {
+    cursor: unset;
+    &:hover {
+      background-color: $THIRD_COLOR;
+    }
+  }
+  span {
+    position: absolute;
+    top: -35%;
+    color: rgb(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $THIRD_COLOR;
+    font-size: $EXTRASMALL;
   }
 }

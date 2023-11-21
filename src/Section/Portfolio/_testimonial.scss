@@ -8,8 +8,11 @@
       gap: 10px;
       .container__content-testimonial {
         @include FlexRowBase;
-        height: 190px;
         gap: 10px;
+        height: fit-content;
+        @include respond-to("small") {
+          height: 190px;
+        }
       }
     }
   }
