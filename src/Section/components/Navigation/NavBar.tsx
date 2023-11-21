@@ -16,10 +16,21 @@ export default NavBar;
 
 const menuItem = ["A propos", "Portfolio", "Contact"];
 const MenuItem = () => {
+  const scrollTo = (sectionName: string) => {
+    const contactSection = document.getElementById(sectionName);
+
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth", // Fait défiler en douceur
+      });
+    }
+  };
   return (
     <ul className="container__list-navigation">
       {menuItem.map((item) => (
-        <li key={item}>{item}</li>
+        <li key={item} onClick={() => scrollTo(item)}>
+          {item}
+        </li>
       ))}
     </ul>
   );

@@ -8,9 +8,9 @@ import { Slide } from "react-awesome-reveal";
 const icone = [<FaGithub />, <FaLinkedinIn />];
 const Contact = () => {
   return (
-    <section id="contact" className="section contact__section">
+    <section id="Contact" className="section contact__section">
       <Entete item="Contact" />
-      <Slide cascade>
+      <Slide delay={100}>
         <div className="container__content-contact">
           <div>
             <MdEmail />
