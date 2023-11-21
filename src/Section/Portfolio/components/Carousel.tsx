@@ -22,7 +22,7 @@ const carouselItems: Item[] = [
     title: "La COOP",
     description: "Site vitrine pour un bar coopératif",
     image: COOP,
-    link: "https://www.lacoopboissy.fr/",
+    link: "https://www.lacoopboissy.fr",
   },
   {
     title: "Agence Graziani",
