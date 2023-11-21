@@ -7,7 +7,7 @@ const NavBar = () => {
         <img src={Logo} alt="Logo" className="logo" />
       </div>
       <MenuItem />
-      <SelectItem />
+      {/* <SelectItem /> */}
     </nav>
   );
 };
