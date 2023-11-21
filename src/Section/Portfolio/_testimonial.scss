@@ -8,6 +8,7 @@
       gap: 10px;
       .container__content-testimonial {
         @include FlexRowBase;
+        height: 190px;
         gap: 10px;
       }
     }
@@ -50,4 +51,23 @@
   height: 2px;
   margin-top: 10px;
   background-color: $SECOND_COLOR;
+}
+.container__bullets {
+  @include FlexRowBase;
+  gap: 5px;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .bullets {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .background__yellow {
+    background-color: $SECOND_COLOR;
+  }
+  .background__white {
+    background-color: white;
+  }
 }
