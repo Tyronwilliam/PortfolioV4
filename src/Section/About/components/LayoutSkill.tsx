@@ -14,9 +14,9 @@ import JSIcon from "../../../assets/jsIcon.png";
 import { Fade } from "react-awesome-reveal";
 const skills = [
   { image: [Html, Css], value: "Html & CSS" },
-  { image: [JSIcon], value: "Javascript" },
   { image: [Sass], value: "SASS" },
   { image: [Tailwind], value: "Tailwind" },
+  { image: [JSIcon], value: "Javascript" },
   { image: [Typescript], value: "Typescript" },
   { image: [ReactIcone], value: "React" },
   { image: [NextIcone], value: "Next JS" },

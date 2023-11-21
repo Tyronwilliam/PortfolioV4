@@ -1,0 +1,44 @@
+.light__background {
+  background: $THIRD_COLOR;
+  border-radius: 5px;
+
+  .left_right-box {
+    > div {
+      @include FlexColBase;
+      gap: 10px;
+      > div {
+        @include FlexRowBase;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.content__box-testimonial {
+  max-width: 450px;
+  @include FlexColBase;
+  gap: 5px;
+
+  p:first-child {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  > p:nth-child(2) {
+    font-weight: 600;
+  }
+  > div {
+    @include FlexRowBase;
+    height: fit-content;
+    gap: 5px;
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+.yellow_band {
+  flex-shrink: 0;
+  width: 30px;
+  height: 2px;
+  margin-top: 10px;
+  background-color: $SECOND_COLOR;
+}

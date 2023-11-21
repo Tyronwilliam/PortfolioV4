@@ -1,6 +1,6 @@
 import { About } from "./Section/About";
 import { Home } from "./Section/Home";
-import { Portfolio } from "./Section/Portfolio";
+import { Portfolio, Testimonial } from "./Section/Portfolio";
 import { NavBar } from "./Section/components";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Home />
       <About />
       <Portfolio />
+      <Testimonial />
     </main>
   );
 }

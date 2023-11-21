@@ -1,3 +1,3 @@
 import Portfolio from "./Portfolio";
-
-export { Portfolio };
+import Testimonial from "./components/Testimonial";
+export { Portfolio, Testimonial };
