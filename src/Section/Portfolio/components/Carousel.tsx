@@ -16,19 +16,19 @@ const carouselItems: Item[] = [
     title: "CSBKlinik",
     description: "Site d'actualités médicales",
     image: CSB,
-    link: "",
+    link: "https://csb-klinik.lu/",
   },
   {
     title: "La COOP",
     description: "Site vitrine pour un bar coopératif",
     image: COOP,
-    link: "",
+    link: "https://www.lacoopboissy.fr/",
   },
   {
     title: "Agence Graziani",
     description: "Base de données de talents pour le cinéma",
     image: AGENCE,
-    link: "",
+    link: "https://www.agencegraziani.fr/fr",
   },
 ];
 const Carousel = () => {
@@ -121,7 +121,9 @@ const Content = ({ viewCard, index, item }: ContentProps) => {
     >
       <p>{item.title}</p>
       <p>{item.description}</p>
-      <a href={item.link}>Voir plus</a>
+      <a href={item.link} target="blank">
+        Voir plus
+      </a>
     </div>
   );
 };

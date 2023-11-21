@@ -20,7 +20,7 @@ const temoignage: Temoignage[] = [
   {
     fullName: "Samba M'BOH",
     testimony:
-      "J'ai travaillé avec Tyron sur plusieurs projets. Proactif, toujours à l'écoute des nouvelles technologies et disponible, il a été un élément moteur lors de nos collaborations. Ce fut un véritable plaisir pour moi de travailler avec lui.",
+      "Tyron est un développeur efficace et consciencieux. Il a participé à l'élaboration d'un site headless avec le CMS strapi et Next.js. Il a su relever les différents défis avec de nombreuses intégrations et adaptations. Je recommande !",
     role: "Consultant en Stratégie Marketing Digital",
     linkedinUrl: "https://www.linkedin.com/in/samba-mboh/",
   },
@@ -39,7 +39,7 @@ const Testimonial = () => {
     const intervalId = setInterval(() => {
       // Passer au témoignage suivant après 150ms
       setCurrentIndex((prevIndex) => (prevIndex + 1) % temoignage.length);
-    }, 6000);
+    }, 8000);
 
     // Nettoyer l'intervalle lorsque le composant est démonté
     return () => clearInterval(intervalId);
