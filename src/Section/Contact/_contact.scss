@@ -42,7 +42,9 @@
   gap: 15px;
   margin: 0 auto 35px auto;
   max-width: 1004px;
-  > div {
+  > button,
+  div,
+  a {
     width: 325px;
     background-color: $THIRD_COLOR;
     @include FlexRowBase;
@@ -54,6 +56,8 @@
     color: $SECOND_COLOR;
     font-weight: 600;
     cursor: pointer;
+    border: none;
+    font-size: 16px;
     svg {
       width: 20px;
       height: 20px;

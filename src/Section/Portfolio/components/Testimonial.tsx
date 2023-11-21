@@ -63,7 +63,10 @@ const Testimonial = () => {
                 </Slide>
               )
           )}
-          <Bullets currentIndex={currentIndex} />
+          <Bullets
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+          />
         </div>
         <div className="container_cartoon">
           <img src={PRO} alt="Cartoon character" />
@@ -101,19 +104,26 @@ const ContentTestimonial = ({
   );
 };
 
-const Bullets = ({ currentIndex }: { currentIndex: number }) => {
+const Bullets = ({
+  currentIndex,
+  setCurrentIndex,
+}: {
+  currentIndex: number;
+  setCurrentIndex: (arg: number) => void;
+}) => {
   return (
     <div className={`container__bullets `}>
       {temoignage?.map((_, index) => {
         return (
-          <div
+          <button
+            onClick={() => setCurrentIndex(index)}
             key={index}
             className={`bullets ${
               index === currentIndex
                 ? "background__yellow"
                 : "background__white"
             }`}
-          ></div>
+          ></button>
         );
       })}{" "}
     </div>

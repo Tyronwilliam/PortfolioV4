@@ -35,7 +35,7 @@ const LayoutSkill = () => {
             <li key={skill.value}>
               <div>
                 {skill?.image?.map((item, index) => (
-                  <img src={item} alt="icon" key={index} />
+                  <img src={item} key={index} />
                 ))}
               </div>
               <span>{skill.value}</span>

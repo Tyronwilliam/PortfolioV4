@@ -13,7 +13,7 @@ const NavBar = () => {
     <nav className="navigation">
       <div className="container__navigation">
         <div className="container__logo" onClick={() => scrollTo("home")}>
-          <img src={Logo} alt="Logo" className="logo" />
+          <img src={Logo} alt="French W Logo" className="logo" />
         </div>
         <MenuItem />
         {/* <SelectItem /> */}
@@ -24,13 +24,17 @@ const NavBar = () => {
 
 export default NavBar;
 
-const menuItem = ["A propos", "Portfolio", "Contact"];
+const menuItem = [
+  { label: "A propos", anchor: "#Apropos" },
+  { label: "Portfolio", anchor: "#Portfolio" },
+  { label: "Contact", anchor: "#Contact" },
+];
 const MenuItem = () => {
   return (
     <ul className="container__list-navigation">
       {menuItem.map((item) => (
-        <li key={item} onClick={() => scrollTo(item)}>
-          {item}
+        <li key={item.label}>
+          <a href={item.anchor}>{item.label}</a>
         </li>
       ))}
     </ul>

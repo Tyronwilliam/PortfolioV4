@@ -5,23 +5,21 @@ import { FaLinkedinIn } from "react-icons/fa";
 export interface Icone {
   icon: React.ReactElement;
   link: string;
+  aria: string;
 }
 const icone: Icone[] = [
   {
     icon: <FaLinkedinIn />,
     link: "https://www.linkedin.com/in/tyron-william-chanu-483956171/",
+    aria: "Linkedin",
   },
-  { icon: <FaGithub />, link: "https://github.com/Tyronwilliam" },
+  {
+    icon: <FaGithub />,
+    link: "https://github.com/Tyronwilliam",
+    aria: "Github",
+  },
 ];
-const scrollTo = (sectionName: string) => {
-  const contactSection = document.getElementById(sectionName);
 
-  if (contactSection) {
-    contactSection.scrollIntoView({
-      behavior: "smooth", // Fait défiler en douceur
-    });
-  }
-};
 const Home = () => {
   return (
     <section className="dark">
@@ -41,11 +39,13 @@ const Presentation = () => {
     <Fade triggerOnce={true} cascade>
       <div className="intro__content-box">
         <div>
-          <p>Je suis</p>
-          <p>Tyron-William CHANU </p>
+          <h1>
+            Je suis
+            <strong>Tyron-William CHANU </strong>
+          </h1>
         </div>
         <span>Développeur Fullstack JS</span>
-        <button onClick={() => scrollTo("Contact")}>Contact</button>
+        <a href="#Contact">Contact</a>
       </div>
     </Fade>
   );
@@ -65,7 +65,7 @@ const SocialMedia = () => {
       <div className="yellow__band"></div>
       <div className="container_icone">
         {icone?.map((el: any) => (
-          <a href={el.link} target="blank" key={el.link}>
+          <a href={el.link} target="blank" key={el.link} aria-label={el.aria}>
             {el.icon}
           </a>
         ))}

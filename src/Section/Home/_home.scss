@@ -13,14 +13,13 @@
     gap: 5px;
     height: fit-content;
     align-items: center;
-    p {
-      &:last-of-type {
-        font-size: $SMALLTEXT;
-        color: $SECOND_COLOR;
-        font-weight: 600;
-        @include respond-to("medium") {
-          font-size: $MEDIUMTEXT;
-        }
+    strong {
+      margin-left: 5px;
+      font-size: $SMALLTEXT;
+      color: $SECOND_COLOR;
+      font-weight: 600;
+      @include respond-to("medium") {
+        font-size: $MEDIUMTEXT;
       }
     }
   }
@@ -29,7 +28,7 @@
     display: inline-block;
     margin-bottom: 15px;
   }
-  button {
+  a {
     width: fit-content;
     padding: 8px;
     background: none;
