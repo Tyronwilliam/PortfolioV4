@@ -39,7 +39,7 @@ const Testimonial = () => {
     const intervalId = setInterval(() => {
       // Passer au témoignage suivant après 150ms
       setCurrentIndex((prevIndex) => (prevIndex + 1) % temoignage.length);
-    }, 8000);
+    }, 12000);
 
     // Nettoyer l'intervalle lorsque le composant est démonté
     return () => clearInterval(intervalId);
@@ -53,7 +53,7 @@ const Testimonial = () => {
           {temoignage?.map(
             (item, index) =>
               index === currentIndex && (
-                <Slide key={index}>
+                <Slide key={index} direction="right">
                   <ContentTestimonial
                     fullName={item.fullName}
                     testimony={item.testimony}
