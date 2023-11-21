@@ -1,4 +1,5 @@
 import { About } from "./Section/About";
+import { Contact } from "./Section/Contact";
 import { Home } from "./Section/Home";
 import { Portfolio, Testimonial } from "./Section/Portfolio";
 import { NavBar } from "./Section/components";
@@ -11,6 +12,7 @@ function App() {
       <About />
       <Portfolio />
       <Testimonial />
+      <Contact />
     </main>
   );
 }

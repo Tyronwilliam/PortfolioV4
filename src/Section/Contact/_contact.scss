@@ -1,0 +1,60 @@
+.contact__section {
+  margin-bottom: 0 !important;
+}
+.custom__border {
+  border-top: 2px solid $SECOND_COLOR;
+  border-bottom: 2px solid $SECOND_COLOR;
+
+  h2 {
+    display: block;
+    margin-top: -40px;
+  }
+}
+.container__border {
+  @include FlexRowBase;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  div {
+    border: 1px solid $SECOND_COLOR;
+    height: 2px;
+    width: 100%;
+  }
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+.no__margin {
+  margin: 0;
+}
+.add__margin {
+  margin-top: -35px;
+}
+.container__content-contact {
+  @include FlexRowBase;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  margin: 0 auto 35px auto;
+  max-width: 1004px;
+  > div {
+    width: 325px;
+    background-color: $THIRD_COLOR;
+    @include FlexRowBase;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: $SECOND_COLOR;
+    font-weight: 600;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+  }
+}

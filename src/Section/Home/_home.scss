@@ -54,7 +54,7 @@
   right: 20%;
   width: fit-content;
   height: 30%;
-
+  z-index: 100;
   .yellow__band {
     width: 3px;
     background-color: $SECOND_COLOR;
@@ -68,12 +68,9 @@
       width: 20px;
       height: 20px;
       fill: white;
-    }
-    button {
-      border: none;
-      background: none;
-      width: fit-content;
-      height: fit-content;
+      &:hover {
+        fill: $SECOND_COLOR;
+      }
     }
   }
 }

@@ -43,12 +43,12 @@ const SocialMedia = () => {
     <div className="container__social">
       <div className="yellow__band"></div>
       <div className="container_icone">
-        <button>
+        <a href="">
           <FaLinkedinIn />
-        </button>
-        <button>
+        </a>
+        <a href="">
           <FaGithub />
-        </button>
+        </a>
       </div>
     </div>
   );
