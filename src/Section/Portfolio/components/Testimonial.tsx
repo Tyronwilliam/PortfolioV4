@@ -1,26 +1,35 @@
 import PRO from "../../../assets/pro.png";
+import { FaLinkedinIn } from "react-icons/fa";
 
+interface Temoignage {
+  fullName: string;
+  testimony: string;
+  role: string;
+  linkedinUrl: string;
+}
+const temoignage: Temoignage[] = [
+  {
+    fullName: "Erik Le Noac'h",
+    testimony:
+      "J'ai travaillé avec Tyron sur plusieurs projets. Proactif, toujours à l'écoute des nouvelles technologies et disponible, il a été un élément moteur lors de nos collaborations. Ce fut un véritable plaisir pour moi de travailler avec lui.",
+    role: "Développeur Web Fullstack",
+    linkedinUrl: "https://www.linkedin.com/in/erik-le-noac-h-91a82b101/",
+  },
+];
 const Testimonial = () => {
   return (
     <section className="section light__background">
       <div className="left_right-box">
         <div>
           <h2>Témoignages</h2>
-          <div>
-            <div className="yellow_band"></div>
-            <div className="content__box-testimonial">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim
-              </p>
-              <p>John Doe</p>
-              <div>
-                <div className="yellow_band"></div>
-                <p>Consultant RGPD</p>
-              </div>
-            </div>
-          </div>
+          {temoignage?.map((item) => (
+            <ContentTestimonial
+              fullName={item.fullName}
+              testimony={item.testimony}
+              role={item.role}
+              linkedinUrl={item.linkedinUrl}
+            />
+          ))}
         </div>
         <div className="container_cartoon">
           <img src={PRO} alt="Cartoon character" />
@@ -31,3 +40,29 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+
+const ContentTestimonial = ({
+  fullName,
+  testimony,
+  role,
+  linkedinUrl,
+}: Temoignage) => {
+  return (
+    <div>
+      <div className="yellow_band"></div>
+      <div className="content__box-testimonial">
+        <p>{testimony}</p>
+        <p>{fullName}</p>
+        <div>
+          <div className="yellow_band"></div>
+          <p>{role}</p>
+          {linkedinUrl && (
+            <a href={linkedinUrl}>
+              <FaLinkedinIn />
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
