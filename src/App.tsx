@@ -1,7 +1,7 @@
 import { About } from "./Section/About";
 import { Contact } from "./Section/Contact";
 import { Home } from "./Section/Home";
-import { Portfolio, Testimonial } from "./Section/Portfolio";
+import { Portfolio } from "./Section/Portfolio";
 import { NavBar } from "./Section/components";
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
       <Home />
       <About />
       <Portfolio />
-      <Testimonial />
       <Contact />
     </main>
   );

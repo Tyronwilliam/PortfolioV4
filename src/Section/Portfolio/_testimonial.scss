@@ -1,7 +1,7 @@
 .light__background {
   background: $THIRD_COLOR;
   border-radius: 5px;
-
+  margin-top: 50px;
   .left_right-box {
     > div {
       @include FlexColBase;

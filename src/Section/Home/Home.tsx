@@ -24,12 +24,12 @@ const scrollTo = (sectionName: string) => {
 };
 const Home = () => {
   return (
-    <section id="home">
-      <div className="section custom-heigth">
+    <section className="dark">
+      <section id="home" className="section custom_heigth-home">
         <div className="left_right-box">
           <Presentation /> <Cartoon />{" "}
         </div>
-      </div>
+      </section>
     </section>
   );
 };

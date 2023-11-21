@@ -46,7 +46,7 @@ const Testimonial = () => {
   }, []); // Le tableau de dépendances est vide, ce qui signifie que cela ne dépend d'aucune variable, il s'exécute donc une seule fois après le montage du composant.
 
   return (
-    <section className="section light__background">
+    <section className=" light__background">
       <div className="left_right-box">
         <div>
           <h2>Témoignages</h2>

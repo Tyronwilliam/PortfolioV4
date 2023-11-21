@@ -1,13 +1,23 @@
 import Logo from "../../../assets/Logo.svg";
+const scrollTo = (sectionName: string) => {
+  const contactSection = document.getElementById(sectionName);
 
+  if (contactSection) {
+    contactSection.scrollIntoView({
+      behavior: "smooth", // Fait défiler en douceur
+    });
+  }
+};
 const NavBar = () => {
   return (
-    <nav className="container__navigation">
-      <div className="container__logo">
-        <img src={Logo} alt="Logo" className="logo" />
+    <nav className="navigation">
+      <div className="container__navigation">
+        <div className="container__logo" onClick={() => scrollTo("home")}>
+          <img src={Logo} alt="Logo" className="logo" />
+        </div>
+        <MenuItem />
+        {/* <SelectItem /> */}
       </div>
-      <MenuItem />
-      {/* <SelectItem /> */}
     </nav>
   );
 };
@@ -16,15 +26,6 @@ export default NavBar;
 
 const menuItem = ["A propos", "Portfolio", "Contact"];
 const MenuItem = () => {
-  const scrollTo = (sectionName: string) => {
-    const contactSection = document.getElementById(sectionName);
-
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: "smooth", // Fait défiler en douceur
-      });
-    }
-  };
   return (
     <ul className="container__list-navigation">
       {menuItem.map((item) => (
