@@ -35,18 +35,18 @@ const MenuItem = () => {
     </ul>
   );
 };
-const options = [
-  { value: "Particulier", label: "Particulier" },
-  { value: "Entreprise", label: "Entreprise" },
-];
-const SelectItem = () => {
-  return (
-    <select className="select__navigation">
-      {options.map((item) => (
-        <option value={item.value} key={item.value}>
-          {item.label}
-        </option>
-      ))}
-    </select>
-  );
-};
+// const options = [
+//   { value: "Particulier", label: "Particulier" },
+//   { value: "Entreprise", label: "Entreprise" },
+// ];
+// const SelectItem = () => {
+//   return (
+//     <select className="select__navigation">
+//       {options.map((item) => (
+//         <option value={item.value} key={item.value}>
+//           {item.label}
+//         </option>
+//       ))}
+//     </select>
+//   );
+// };

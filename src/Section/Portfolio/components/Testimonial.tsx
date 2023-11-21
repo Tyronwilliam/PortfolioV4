@@ -104,7 +104,7 @@ const ContentTestimonial = ({
 const Bullets = ({ currentIndex }: { currentIndex: number }) => {
   return (
     <div className={`container__bullets `}>
-      {temoignage?.map((item, index) => {
+      {temoignage?.map((_, index) => {
         return (
           <div
             className={`bullets ${
