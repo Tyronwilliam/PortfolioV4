@@ -5,7 +5,17 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
 
-const icone = [<FaGithub />, <FaLinkedinIn />];
+export interface Icone {
+  icon: React.ReactElement;
+  link: string;
+}
+const icone: Icone[] = [
+  { icon: <FaGithub />, link: "https://github.com/Tyronwilliam" },
+  {
+    icon: <FaLinkedinIn />,
+    link: "https://www.linkedin.com/in/tyron-william-chanu-483956171/",
+  },
+];
 const Contact = () => {
   return (
     <section id="Contact" className="section contact__section">
@@ -45,7 +55,12 @@ const Entete = ({ item }: EnteteProps) => {
     >
       <div></div>
       {typeof item === "string" && <h2>{item}</h2>}
-      {Array.isArray(item) && item?.map((el: any) => <a href="">{el}</a>)}
+      {Array.isArray(item) &&
+        item?.map((el: any) => (
+          <a href={el.link} target="blank">
+            {el.icon}
+          </a>
+        ))}
       <div></div>
     </div>
   );

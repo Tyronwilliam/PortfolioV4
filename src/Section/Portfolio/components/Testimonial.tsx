@@ -91,7 +91,7 @@ const ContentTestimonial = ({
           <div className="yellow_band"></div>
           <p>{role}</p>
           {linkedinUrl !== "" && (
-            <a href={linkedinUrl}>
+            <a href={linkedinUrl} target="blank">
               <FaLinkedinIn />
             </a>
           )}
