@@ -87,7 +87,7 @@ const Entete = ({ item }: EnteteProps) => {
       {typeof item === "string" && <h2>{item}</h2>}
       {Array.isArray(item) &&
         item?.map((el: any) => (
-          <a href={el.link} target="blank">
+          <a href={el.link} target="blank" key={el.link}>
             {el.icon}
           </a>
         ))}

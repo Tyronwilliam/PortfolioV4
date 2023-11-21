@@ -65,7 +65,7 @@ const SocialMedia = () => {
       <div className="yellow__band"></div>
       <div className="container_icone">
         {icone?.map((el: any) => (
-          <a href={el.link} target="blank">
+          <a href={el.link} target="blank" key={el.link}>
             {el.icon}
           </a>
         ))}

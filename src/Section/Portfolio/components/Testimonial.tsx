@@ -107,6 +107,7 @@ const Bullets = ({ currentIndex }: { currentIndex: number }) => {
       {temoignage?.map((_, index) => {
         return (
           <div
+            key={index}
             className={`bullets ${
               index === currentIndex
                 ? "background__yellow"
