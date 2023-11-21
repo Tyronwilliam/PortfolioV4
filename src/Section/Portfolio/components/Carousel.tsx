@@ -2,10 +2,10 @@ import React from "react";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 //@ts-ignore
-import CSB from "../../../assets/csb.PNG";
+import CSB from "../../../assets/csb.png";
 import COOP from "../../../assets/lacoop.png"; //@ts-ignore
 
-import AGENCE from "../../../assets/AgenceGraziani.PNG";
+import AGENCE from "../../../assets/AgenceGraziani.png";
 interface Item {
   title: string;
   description: string;
