@@ -22,27 +22,29 @@
   max-width: 450px;
   @include FlexColBase;
   gap: 5px;
-
-  p:first-child {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  > p:nth-child(2) {
-    font-weight: 600;
-  }
-  > div {
-    @include FlexRowBase;
-    height: fit-content;
-    gap: 5px;
-    p {
+  blockquote {
+    p:first-child {
       color: rgba(255, 255, 255, 0.8);
     }
-    a {
-      height: 100%;
-      color: $SECOND_COLOR;
-      svg {
-        height: 100%;
-        &:hover {
-          fill: white;
+    footer {
+      > p:first-child {
+        font-weight: 600;
+      }
+      > div {
+        @include FlexRowBase;
+        height: fit-content;
+        gap: 5px;
+        p {
+          color: rgba(255, 255, 255, 0.8);
+        }
+        a {
+          color: $SECOND_COLOR;
+          svg {
+            height: 100%;
+            &:hover {
+              fill: white;
+            }
+          }
         }
       }
     }

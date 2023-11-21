@@ -88,17 +88,23 @@ const ContentTestimonial = ({
     <div className="container__content-testimonial">
       <div className="yellow_band"></div>
       <div className="content__box-testimonial">
-        <p>{testimony}</p>
-        <p>{fullName}</p>
-        <div>
-          <div className="yellow_band"></div>
-          <p>{role}</p>
-          {linkedinUrl !== "" && (
-            <a href={linkedinUrl} target="blank">
-              <FaLinkedinIn />
-            </a>
-          )}
-        </div>
+        <blockquote>
+          <p>{testimony}</p>
+          <footer>
+            <p>{fullName}</p>
+            <div>
+              <div className="yellow_band"></div>
+              <cite>
+                <p>{role}</p>
+              </cite>
+              {linkedinUrl !== "" && (
+                <a href={linkedinUrl} target="blank">
+                  <FaLinkedinIn />
+                </a>
+              )}
+            </div>
+          </footer>
+        </blockquote>
       </div>
     </div>
   );
